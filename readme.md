@@ -10,6 +10,11 @@ pip install -r requirements.txt
 flask run --debug
 ```
 
+Запуск проекта в рабочем (production) режиме:
+```sh
+gunicorn --bind '0.0.0.0:5000' 'app:create_app()'
+```
+
 Запуск модульных тестов:
 ```sh
 pytest
